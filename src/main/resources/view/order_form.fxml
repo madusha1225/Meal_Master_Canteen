@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="625.0" prefWidth="764.0" style="-fx-background-color: #F0FFF0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.CanteenDemo.controller.OrderFormController">
+   <children>
+      <AnchorPane fx:id="orderForm" layoutX="7.0" layoutY="6.0" prefHeight="625.0" prefWidth="764.0" style="-fx-background-color: #C3FDB8; -fx-background-radius: 30;">
+         <children>
+            <AnchorPane layoutX="23.0" layoutY="14.0" prefHeight="132.0" prefWidth="714.0" style="-fx-background-color: #99C68E; -fx-background-radius: 20;">
+               <children>
+                  <TextField layoutX="311.0" layoutY="1.0" prefHeight="25.0" prefWidth="92.0" text="New Order">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtTel" layoutX="554.0" layoutY="45.0" onAction="#txtTelAction" onKeyReleased="#txtOrderPhone" prefHeight="25.0" prefWidth="146.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField editable="false" layoutX="14.0" layoutY="33.0" prefHeight="25.0" prefWidth="66.0" text="Order ID">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField editable="false" layoutX="386.0" layoutY="45.0" prefHeight="25.0" prefWidth="158.0" text="Customer Phone Number">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="386.0" layoutY="78.0" prefHeight="25.0" prefWidth="112.0" text="Customer Name">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField editable="false" layoutX="14.0" layoutY="78.0" prefHeight="25.0" prefWidth="59.0" text="Date">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="labelOrderID" layoutX="102.0" layoutY="33.0" prefHeight="25.0" prefWidth="92.0" />
+                  <Label fx:id="labelDate" layoutX="102.0" layoutY="78.0" prefHeight="25.0" prefWidth="92.0" />
+                  <Label fx:id="labelCustomerName" layoutX="554.0" layoutY="78.0" prefHeight="25.0" prefWidth="146.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="31.0" layoutY="192.0" prefHeight="368.0" prefWidth="697.0" style="-fx-background-color: #99C68E; -fx-background-radius: 20;">
+               <children>
+                  <TableView fx:id="orderTable" layoutX="26.0" layoutY="144.0" prefHeight="207.0" prefWidth="661.0" stylesheets="@../Css/tableView.css">
+                    <columns>
+                        <TableColumn fx:id="colId" prefWidth="96.33331298828125" text="Meal ID" />
+                        <TableColumn fx:id="colDes" prefWidth="178.6666259765625" text="Discription" />
+                        <TableColumn fx:id="colUnitPrice" prefWidth="126.3333740234375" text="Price" />
+                        <TableColumn fx:id="colQty" prefWidth="96.66668701171875" text="Quantity" />
+                        <TableColumn fx:id="colTotal" prefWidth="158.33331298828125" text="Total Amount" />
+                    </columns>
+                  </TableView>
+                  <TextField editable="false" layoutX="24.0" layoutY="34.0" prefHeight="25.0" prefWidth="66.0" text="Meal ID">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <ComboBox fx:id="ItemBox" layoutX="126.0" layoutY="34.0" onAction="#ItemBoxAction" prefHeight="14.0" prefWidth="92.0" />
+                  <TextField layoutX="314.0" layoutY="2.0" prefHeight="25.0" prefWidth="59.0" text="Meals">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField editable="false" layoutX="24.0" layoutY="66.0" prefHeight="25.0" prefWidth="85.0" text="Meal Name">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField editable="false" layoutX="496.0" layoutY="66.0" prefHeight="25.0" prefWidth="66.0" text="Quantity">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField editable="false" layoutX="496.0" layoutY="34.0" prefHeight="25.0" prefWidth="66.0" text="Price">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtQty" layoutX="582.0" layoutY="66.0" onKeyReleased="#txtOrdrQuty" prefHeight="25.0" prefWidth="92.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="572.0" layoutY="104.0" mnemonicParsing="false" onAction="#btnAddTotable" prefHeight="14.0" prefWidth="112.0" style="-fx-background-color: #FFFFFF;" text="Add to Cart">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="26.0">
+                           <image>
+                              <Image url="@../icon/icons8-cart.gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label fx:id="labelDes" layoutX="127.0" layoutY="64.0" prefHeight="25.0" prefWidth="92.0" />
+                  <Label fx:id="labelUnitPrice" layoutX="580.0" layoutY="34.0" prefHeight="25.0" prefWidth="92.0" />
+               </children>
+            </AnchorPane>
+            <Button layoutX="616.0" layoutY="569.0" mnemonicParsing="false" onAction="#btnPlaceToOrderAction" prefHeight="14.0" prefWidth="112.0" style="-fx-background-color: #FFFFFF;" text="Place Order">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="26.0">
+                     <image>
+                        <Image url="@../icon/icons8-purchase-orderDTO-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField editable="false" layoutX="31.0" layoutY="573.0" prefHeight="25.0" prefWidth="85.0" text="Net Total :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Button layoutX="497.0" layoutY="569.0" mnemonicParsing="false" onAction="#btnNewOrder" prefHeight="14.0" prefWidth="112.0" style="-fx-background-color: #FFFFFF;" text="New Order">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="26.0">
+                     <image>
+                        <Image url="@../icon/icons8-new-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="labelNetTotal" layoutX="134.0" layoutY="573.0" prefHeight="25.0" prefWidth="104.0" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

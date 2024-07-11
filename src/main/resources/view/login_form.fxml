@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="loginForm" prefHeight="277.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.CanteenDemo.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="339.0" fitWidth="627.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/healthy-food-black-rice-avocado-cherry-tomatoes-green-peas-hazelnut-wooden-background-top-view-free-space-your-text_187166-42819.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="404.0" layoutY="4.0" prefHeight="277.0" prefWidth="209.0" style="-fx-border-width: 2; -fx-border-color: #6deb00; -fx-background-color: #50C878; -fx-background-radius: 15; -fx-border-radius: 15;">
+         <children>
+            <TextField fx:id="txtName" alignment="CENTER" layoutX="30.0" layoutY="170.0" onAction="#txtUserNameAction" onKeyReleased="#txtUserOnKey" prefHeight="25.0" prefWidth="157.0" promptText="User Name" style="-fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" />
+            <Button layoutX="52.0" layoutY="239.0" mnemonicParsing="false" onAction="#btnLoginAction" prefHeight="3.0" prefWidth="113.0" style="-fx-background-color: #EEEEEE;" text="Login" textFill="#18e233" />
+            <ImageView fitHeight="111.0" fitWidth="200.0" layoutX="5.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="144.0" fitWidth="187.0" layoutX="12.0" layoutY="10.0" opacity="0.88">
+               <image>
+                  <Image url="@../image/WzPQ_pPNS3eyTE5E15IP5g.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="41.0" layoutY="171.0">
+               <image>
+                  <Image url="@../icon/icons8-male-user-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="64.0" layoutY="243.0">
+               <image>
+                  <Image url="@../icon/icons8-login-50.png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="txtPass" alignment="CENTER" layoutX="30.0" layoutY="204.0" onAction="#txtPasswordAction" onKeyReleased="#txtUserPassOnKey" prefHeight="27.0" prefWidth="157.0" promptText="Password" style="-fx-background-radius: 10; -fx-border-color: Black; -fx-border-radius: 10;" />
+            <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="41.0" layoutY="206.0">
+               <image>
+                  <Image url="@../icon/icons8-password-50.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

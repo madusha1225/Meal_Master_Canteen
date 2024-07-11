@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="625.0" prefWidth="764.0" style="-fx-background-color: #F0FFF0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.CanteenDemo.controller.SettingFormController">
+   <children>
+      <AnchorPane layoutX="61.0" layoutY="187.0" prefHeight="334.0" prefWidth="257.0" style="-fx-background-color: #C3FDB8; -fx-background-radius: 25;">
+         <children>
+            <ImageView layoutX="81.0" layoutY="14.0">
+               <image>
+                  <Image url="@../icon/icons8-userDTO-96.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtOldName" layoutX="140.0" layoutY="130.0" onKeyReleased="#txtSettingUserKey" prefHeight="25.0" prefWidth="106.0" />
+            <TextField editable="false" layoutX="23.0" layoutY="130.0" prefHeight="25.0" prefWidth="65.0" text="Use name ">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtPassword" layoutX="140.0" layoutY="167.0" onAction="#txtPasswordAction" onKeyReleased="#txtSettingUserPassKey" prefHeight="25.0" prefWidth="106.0" />
+            <TextField editable="false" layoutX="23.0" layoutY="167.0" prefHeight="25.0" prefWidth="65.0" text="Password">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </TextField>
+            <Pane fx:id="visiblePane" layoutX="13.0" layoutY="205.0" prefHeight="122.0" prefWidth="231.0">
+               <children>
+                  <TextField editable="false" layoutX="8.0" layoutY="18.0" prefHeight="25.0" prefWidth="84.0" text="New Use name ">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtNewName" layoutX="125.0" layoutY="18.0" onKeyReleased="#txtSettingUse2rKey" prefHeight="25.0" prefWidth="106.0" />
+                  <TextField editable="false" layoutX="8.0" layoutY="56.0" prefHeight="25.0" prefWidth="84.0" text="New Password">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtNewPassword" layoutX="125.0" layoutY="56.0" onKeyReleased="#txtSettingUserPass2Key" prefHeight="25.0" prefWidth="106.0" />
+                  <Button layoutX="74.0" layoutY="90.0" mnemonicParsing="false" onAction="#cnfirmAction" prefHeight="16.0" prefWidth="84.0" style="-fx-background-color: white;" text="Confirm">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0">
+                           <image>
+                              <Image url="@../icon/icons8-confirm.gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="441.0" layoutY="187.0" prefHeight="334.0" prefWidth="257.0" style="-fx-background-color: #C3FDB8; -fx-background-radius: 25;">
+         <children>
+            <TextField fx:id="txtTel" layoutX="43.0" layoutY="30.0" onAction="#txtTelAction" onKeyReleased="#txtSettingUserKey" prefHeight="25.0" prefWidth="179.0" />
+            <Pane fx:id="QRPane" layoutX="29.0" layoutY="76.0" prefHeight="240.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="58.0" layoutY="156.0" mnemonicParsing="false" onAction="#QRSAVEAction" prefHeight="16.0" prefWidth="84.0" style="-fx-background-color: white;" text="Save Image">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txtQRNAme" layoutX="58.0" layoutY="108.0" onAction="#txtQRNameAction" onKeyReleased="#txtSettingUserKey" prefHeight="25.0" prefWidth="84.0" promptText="QR Name" />
+                  <Label layoutX="27.0" layoutY="48.0" prefHeight="16.0" prefWidth="146.0" text="Generate Successfully" />
+               </children>
+            </Pane>
+         </children></AnchorPane>
+      <Button layoutX="128.0" layoutY="111.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="123.0" style="-fx-background-color: white;" text="User Setting">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="33.0">
+               <image>
+                  <Image url="@../icon/icons8-setting.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ButtonBar layoutX="66.0" layoutY="41.0" prefHeight="40.0" prefWidth="200.0" />
+      <Button layoutX="503.0" layoutY="111.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="133.0" style="-fx-background-color: white;" text="Genarate QR">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="33.0">
+               <image>
+                  <Image url="@../icon/icons8-qr.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+
+</AnchorPane>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="625.0" prefWidth="764.0" style="-fx-background-color: #F0FFF0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.CanteenDemo.controller.SupplierFormController">
+   <children>
+      <AnchorPane layoutX="6.0" layoutY="10.0" prefHeight="625.0" prefWidth="764.0" style="-fx-background-color: #C3FDB8; -fx-background-radius: 30;">
+         <children>
+            <AnchorPane layoutX="22.0" layoutY="14.0" prefHeight="216.0" prefWidth="556.0" style="-fx-background-color: #C0C0C0; -fx-background-radius: 10;">
+               <children>
+                  <TextField fx:id="txtId" layoutX="124.0" layoutY="29.0" onAction="#txtIdAction" onKeyReleased="#txtSIdOnKeyReleased" prefHeight="26.0" prefWidth="234.0" style="-fx-background-color: white;" />
+                  <TextField editable="false" layoutX="11.0" layoutY="30.0" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: white;" text="Supplier ID">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></TextField>
+                  <TextField fx:id="txtAddress" layoutX="123.0" layoutY="94.0" onKeyReleased="#txtSAddKeyReleased" prefHeight="26.0" prefWidth="234.0" style="-fx-background-color: white;" />
+                  <TextField editable="false" layoutX="11.0" layoutY="160.0" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: white;" text="Phone Number">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></TextField>
+                  <TextField fx:id="txtPhoneNumber" layoutX="123.0" layoutY="160.0" onKeyReleased="#txtSPhoKeyReleased" prefHeight="25.0" prefWidth="234.0" style="-fx-background-color: white;" />
+                  <TextField fx:id="txtName" layoutX="124.0" layoutY="62.0" onKeyReleased="#txtSNOnKeyReleased" prefHeight="26.0" prefWidth="234.0" style="-fx-background-color: white;" />
+                  <TextField editable="false" layoutX="11.0" layoutY="63.0" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: white;" text="Name ">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></TextField>
+                  <TextField editable="false" layoutX="11.0" layoutY="129.0" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: white;" text="Email">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></TextField>
+                  <TextField fx:id="txtEmail" layoutX="123.0" layoutY="129.0" onKeyReleased="#txtSEmaKeyReleased" prefHeight="26.0" prefWidth="234.0" style="-fx-background-color: white;" />
+                  <TextField editable="false" layoutX="11.0" layoutY="94.0" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: white;" text="Address">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></TextField>
+                  <TextField fx:id="txtSearch" layoutX="401.0" layoutY="2.0" onAction="#txtSearchAction" prefHeight="25.0" prefWidth="149.0" style="-fx-background-radius: 15;" />
+                  <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="519.0" layoutY="5.0">
+                     <image>
+                        <Image url="@../icon/icons8-search-50.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="152.0" fitWidth="168.0" layoutX="382.0" layoutY="35.0">
+                     <image>
+                        <Image url="@../image/87279bff-8b1b-4ec0-b449-d7ec71e9f4c5.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="414.0" layoutY="181.0" mnemonicParsing="false" onAction="#btnEmailFrom" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #C0C0C0; -fx-background-radius: 10;" text="Send Email">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="23.0">
+                           <image>
+                              <Image url="@../icon/icons8-gmail-logo.gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="22.0" layoutY="250.0" prefHeight="372.0" prefWidth="738.0" style="-fx-background-color: #C0C0C0; -fx-background-radius: 10;">
+               <children>
+                  <TableView fx:id="supTable" layoutX="9.0" layoutY="41.0" onMouseClicked="#supplierMouse" prefHeight="312.0" prefWidth="721.0" stylesheets="@../Css/tableView.css">
+                     <columns>
+                        <TableColumn fx:id="supId" prefWidth="99.66665649414062" text="Supplier ID" />
+                        <TableColumn fx:id="supName" prefWidth="174.33334350585938" text="Name" />
+                        <TableColumn fx:id="supAddress" prefWidth="152.0" text="Address " />
+                        <TableColumn fx:id="supEmail" prefWidth="158.33331298828125" text="Email" />
+                        <TableColumn fx:id="supPhone" prefWidth="130.66668701171875" text="Phone Number" />
+                     </columns>
+                  </TableView>
+                  <TextField editable="false" layoutX="312.0" layoutY="9.0" prefHeight="18.0" prefWidth="116.0" text="Supplier Table">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <BorderPane layoutX="601.0" layoutY="14.0" prefHeight="230.0" prefWidth="149.0" style="-fx-background-color: #F5FFFA; -fx-background-radius: 15;" />
+            <Button layoutX="612.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnClearAction" prefHeight="44.0" prefWidth="127.0" style="-fx-background-color: #50C878; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-width: 10;" text="  Clear">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="31.0">
+                     <image>
+                        <Image url="@../icon/icons8-clear-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="612.0" layoutY="193.0" mnemonicParsing="false" onAction="#btnDeleteAction" prefHeight="44.0" prefWidth="127.0" style="-fx-background-color: #50C878; -fx-background-radius: 25;" text=" Delete " textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="31.0">
+                     <image>
+                        <Image url="@../icon/icons8-delete-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="612.0" layoutY="136.0" mnemonicParsing="false" onAction="#btnUpdateAction" prefHeight="44.0" prefWidth="127.0" style="-fx-background-color: #50C878; -fx-background-radius: 25;" text="             Update ">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="612.0" layoutY="82.0" mnemonicParsing="false" onAction="#btnSaveAction" prefHeight="44.0" prefWidth="127.0" style="-fx-background-color: #50C878; -fx-background-radius: 25;" text="  Save" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="31.0">
+                     <image>
+                        <Image url="@../icon/icons8-save-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="636.0" layoutY="142.0">
+               <image>
+                  <Image url="@../icon/icons8-update-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

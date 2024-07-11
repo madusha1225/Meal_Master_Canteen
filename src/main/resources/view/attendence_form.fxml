@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="625.0" prefWidth="764.0" style="-fx-background-color: #F0FFF0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.CanteenDemo.controller.AttendanceFormController">
+   <children>
+      <TableView fx:id="tblAttendance" layoutX="35.0" layoutY="81.0" prefHeight="520.0" prefWidth="695.0" stylesheets="@../Css/tableView.css">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="143.0" text="Name" />
+          <TableColumn fx:id="colDate" prefWidth="164.0" text="Date" />
+            <TableColumn fx:id="colIn" prefWidth="210.33331298828125" text="In Time" />
+            <TableColumn fx:id="colOut" prefWidth="174.66668701171875" text="Out Time" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnScan" layoutX="36.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnScanAction" prefHeight="58.0" prefWidth="70.0" style="-fx-background-color: #F0FFF0;">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@../icon/icons8-qr.gif" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label fx:id="labelId" layoutX="151.0" layoutY="30.0" prefHeight="26.0" prefWidth="101.0" />
+      <Label fx:id="labelName" layoutX="453.0" layoutY="30.0" prefHeight="26.0" prefWidth="199.0" />
+   </children>
+</AnchorPane>
